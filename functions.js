@@ -1,98 +1,116 @@
-//Argumentos e parametros
+//Prototype PROTÓTIPOS (característica), javascript possue una série da funcionalidades e atributos, 
+/* 
+*prototype-based language
+prototype chain
+__proto__
+ */
 
-//function expression o
-// funccion anonymous
-// parÂmetros (parameters)
 /*
-const sum = function (number1, number2) {
-  total= number1 + number2
-  return total
+Type conversion(typecasting) vs   coersion
 
-//console.log(number1 + number2)
-}
+*Alteraçao de um tipo de dado para outro tipo 
 
-let number1 = 34
-let number2 = 25 
-sum(number1, number2) // ao invocar a function , estou passando arguments- or argumentos
-//sum(4, 5)
-//sum(56, 83938457584)
+*/
+//transformou de maneira coersitivamente o 5 em uma string para nao dar problema no nosso codigo 
+//console.log('9' + 5) //95
 
-/*console.log (`o numero 1 è ${number1}`)
-console.log (`o numero 1 è ${number2}`)
+//faço a conversaro do 9 que era string , para um number. agora javascript entende que é um numero e soma. 
 
-console.log (`a soma é ${sum(number1, number2)}`)
-console.log(total)
+//console.log(Number('9') + 5)
 
-// ***Function is a blender
+//MANIPULAR String e números 
 
-function makeJuice (fruta1, fruta2){
-  return 'sucode : ' + fruta1 + fruta2
+//trasnformar String em número e Numero em String 
 
-}
- const glass = makeJuice (' banana ', ' apple ')
- console.log(glass)
+/*let string = "123"
 
- //function scope 
+console.log(Number(string))
 
- let subject 
+let number = 321
 
- function creatThink() {
-  subject = 'study'
-  return subject 
+console.log(String(number))*/
 
- }
- console.log(subject)
- console.log(creatThink(subject))
- console.log(subject)
+//MANIPULANDO STRINGS NUMEROS 
 
- //function hoisting 
+//Contando caracteres e digitos 
 
- sayMyName();
+/*let word = "paralelepipedo"
+console.log(word.length)
 
- function sayMyName() {
-  console.log( 'suelen')
-
-   }
-   
-   //Arrow(=>) function () => { código a ser executado }, chamada de Arrow Function. moderno compacto
-   const sayMyName = (name) => {
-console.log( name)
-   }
-   sayMyName('suelen')
-
-   // callback function - callback function é uma função que está sendo passada para outra função como parâmetro.
-
-function sayMyName(name) {
-  console.log('antes de executar a funçao callbak')
-  name()
- console.log('depois de executar a callbak')
-}
-
-sayMyName (
-  () => {
-    console.log ('estou em uma callbak')
-  }
-)
-
-//function() constructor  *expressao new * criar um novo objeto *this keyword
+let number = 1234
+console.log(String(number).length)*/
 
 
-function Person(name){
-  this.name = name
-  this.walk = function () {
-    return this.name + " esta andando "
-  }
-}
-const mayk = new Person(" Mayke ")
-const Joao = new Person(" joao ")
+//Casas decimais-TRANSFORMAR um número quebrado com 2 casas decimais e trocar por vírgula
+/*let number = 727.283056
+console.log(number.toFixed(2).replace(".", ","))*/
 
-console.log(mayk.walk())
-console.log(Joao.walk())*/
-let fruit = "banana";
-function getFruit(fruit) {
-  fruit = "orange";
-  return fruit
-}
+//METODO toUpperCase() - toLowerCase()
 
-console.log(fruit);
-console.log(getFruit(fruit));
+/*let word = "Programar é muito baccana!"
+
+console.log(word.toLocaleUpperCase())
+
+let brazil = "BRASIL É O MELHOR PAIS DO MUNDO"
+
+console.log(brazil.toLocaleLowerCase().toLocaleUpperCase())*/
+
+//SEPARANDO STRING  - MANIPULANDO STRING Y ARRAYS
+
+/*let phrase = "eu quero viver o Amor"
+let myArray = phrase.split(" ")
+//console.log(myArray)
+let phrasesWithUnderscore = myArray.join("_")
+console.log(phrasesWithUnderscore)
+
+// MANIPULANDO STRINGS  includes() includes nao verifica se muda entre maiusculo o minusculo. 
+
+let phrase = "eu quero viver o amor"
+
+console.log(phrase.includes("amor"))
+
+//MANIPULANDO ARRAYS
+// Criar ARRAY com construtores usa-se new Array(args), passando como argumento o tamanho deste vetor ou os valores,
+// por exemplo: const array = new Array("a", "b", "c").
+
+//et myArray = new Array('a', 'b', 'c' )
+let myArray = new Array(10)
+console.log(myArray)
+
+//CONTAR ELEMENTOS DE UM ARRAY 
+//console.log(["a", {type: "array"},
+ //function () { return "alo"},][1].type)
+
+console.log(["a", "b", "c"].length)
+
+//Strings para arrays -TRANSFORMAR CCADEIA EM CARACTERES EM ELEMENTOS DE UM ARRAY
+
+let word = "manipulaçao"
+
+console.log(Array.from(word))*/
+
+//MANIPULANDO ARRAYS
+
+let techs = [ "html", "css", "js"]
+
+//ADICIONAR UM ITEM NO FIM
+
+techs.push("node.js")
+// ADICIONAR NO COMEÇO
+
+techs.unshift("sql")
+//REMOVER DO FIM
+//techs.pop("node.js")
+// REMOVER DO COMEÇO 
+//techs.shift("sql")
+// PEGAR SOMENTE ALGUNS ELEMENTOS DO ARRAY
+
+//console.log(techs.slice(1, 2))
+//remover 1 ou mais items em qualquer posiçao do array
+
+//techs.splice(1, 2)
+// ENCONTRAR A POSIÇAO DE UM ELEMNTO NO ARRAY
+let index = techs.indexOf('html')
+techs.splice(index, 1)
+
+console.log(techs)
